@@ -14,7 +14,7 @@ def make_step_frame(parent, text, bg_color):
         bd=2,
         relief="ridge",
         padx=2,
-        pady=3
+        pady=6
     )
     label = tk.Label(
         frame,
@@ -33,7 +33,7 @@ def add_task_buttons(frame, tasks):
             text=label,
             command=func,
             **btn_params
-        ).pack(padx=4, pady=2)
+        ).pack(padx=35, pady=5)
 
 def create_eccang_section(parent):
     eccang_container = tk.LabelFrame(

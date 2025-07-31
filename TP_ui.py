@@ -8,17 +8,17 @@ def make_step_frame(parent, text, bg_color):
         bg=bg_color,
         bd=2,
         relief="ridge",
-        padx=2,
-        pady=3
+        padx=6,
+        pady=6
     )
     label = tk.Label(
         frame,
         text=text,
         font=header_font,
-        fg="#143b3b",
+        fg="#3b3b3b",
         bg=bg_color
     )
-    label.pack(anchor="w", pady=(0, 1))
+    label.pack(anchor="w", pady=(0, 4))
     return frame
 
 def add_task_buttons(frame, tasks):
@@ -28,7 +28,7 @@ def add_task_buttons(frame, tasks):
             text=label,
             command=func,
             **btn_params
-        ).pack(padx=4, pady=2)
+        ).pack(padx=35, pady=2)
 
 def create_inventory_section(parent):
     inv_container = tk.LabelFrame(
@@ -44,6 +44,8 @@ def create_inventory_section(parent):
         labelanchor="n"
     )
     inv_container.grid(row=0, column=0, sticky="nsew", padx=0, pady=0)
+
+    # 让容器内部自动扩展
     inv_container.columnconfigure(0, weight=1)
 
     frame4 = make_step_frame(inv_container, "🍋 SKU Mapping", "#dbfdfd")

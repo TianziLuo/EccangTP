@@ -45,7 +45,7 @@ def add_task_buttons(frame, tasks):
 def create_main_window():
     window = tk.Tk()
     window.title("🍉 Subarashii Melon 🍉")
-    window.geometry("880x700")
+    window.geometry("843x580")
     window.configure(bg="#EDFCA6")
 
     # ======= 标题 =======
@@ -59,7 +59,7 @@ def create_main_window():
 
     # ======= 主容器，使用 grid 布局划分左右两块 =======
     main_frame = tk.Frame(window, bg="#EDFCA6")
-    main_frame.pack(fill="both", expand=True, padx=10, pady=10)
+    main_frame.pack(fill="both", expand=True, padx=23, pady=10)
 
     main_frame.columnconfigure(0, weight=1)  # 左列权重1
     main_frame.columnconfigure(1, weight=1)  # 右列权重1
@@ -79,6 +79,7 @@ def create_main_window():
 
     return window
 
-# ======= 入口 =======
+''''
 if __name__ == "__main__":
     create_main_window().mainloop()
+'''
