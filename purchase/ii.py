@@ -6,7 +6,7 @@ from datetime import datetime
 def copy_purchase():
     # Set source and target directories
     download_dir = Path(os.path.expanduser('~')) / 'Downloads'
-    target_dir = Path(r"C:\Frank\合并文件\易仓采购单管理")
+    target_dir = Path(r"C:\ACT\公用核心\易仓\易仓日常下载\采购单合并")
 
     # Create target directory if it doesn't exist
     target_dir.mkdir(parents=True, exist_ok=True)

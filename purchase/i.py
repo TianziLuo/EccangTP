@@ -3,7 +3,7 @@ import glob
 
 def clean_folder():
     # Folder paths
-    folder_paths = [r'C:\Frank\合并文件\易仓采购单管理',]
+    folder_paths = [r"C:\ACT\公用核心\易仓\易仓日常下载\采购单合并",]
     # File types
     file_patterns = ['*.xlsx', '*.csv']
 

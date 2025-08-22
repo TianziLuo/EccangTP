@@ -11,7 +11,7 @@ def SKU_out():
     xlsx_out_path  = os.path.join(downloads_dir, f"{base_name}.xlsx")
     xls_out_path   = os.path.join(downloads_dir, f"{base_name}.xls")
 
-    SOURCE_PATH    = r"C:\Frank\1.1_核心.xlsx"
+    SOURCE_PATH    = r"C:\Frank\1.6_FBA Listing.xlsx"
     TEMPLATE_PATH  = r"C:\Template\上传易仓SKU映射关系.xlsx"
     SHEET_NAME     = "上传易仓SKU映射关系"
 

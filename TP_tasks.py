@@ -12,7 +12,8 @@ downloads = Path.home() / "Downloads"
 
 # === Step 1 ===
 def step_1_1(): open_excel_file(r"C:\Frank\1.1_核心.xlsx")
-def step_1_2(): 
+def step_1_2(): open_excel_file(r"C:\Frank\1.6_FBA Listing.xlsx")
+def step_1_3(): 
 
     # SKU mapping file out
     SKU_out()
@@ -22,7 +23,7 @@ def step_1_2():
     # copy file
     copy_file_to_dirs(
         r"C:\Users\monica\Downloads\上传易仓SKU映射关系.xls",
-        [r"C:\Frank\易仓-TP"]
+        [r"C:\ACT\公用核心\易仓"]
     )
 
 # === Step 2 ===
@@ -60,18 +61,17 @@ def step_2_2():
     copy_file_to_dirs(
         str(downloads / "TP-Upload.csv"),
         [
-            r"C:\Frank\易仓-TP",
-            r"C:\ACT\公用核心\upload_1.1 TP 库存更新"
+            r"C:\ACT\公用核心\TP"
         ]
     )
 
     time.sleep(2)
 
-    open_excel_file(r"C:\Frank\易仓-TP\SKUINV.xlsx")
+    open_excel_file(r"C:\ACT\公用核心\TP\SKUINV.xlsx")
 
 def step_2_4():
     copy_file_to_dirs(
-        r"C:\Frank\易仓-TP\SKUINV.xlsx",
+        r"C:\ACT\公用核心\TP\SKUINV.xlsx",
         [r"\\MICHAEL\ctshippingapp\SHIPDOC\INVUPLOAD"]
     )
 
@@ -98,7 +98,6 @@ def step_3_3():
     copy_file_to_dirs(
         str(downloads / "店小秘 更新库存.xlsx"),
         [
-            r"C:\Frank\原始数据\店小秘+TP+订单+盘点",
-            r"C:\ACT\公用核心\Upload_2.1 店小秘  库存更新"
+            r"C:\ACT\公用核心\店小秘"
         ]
     )

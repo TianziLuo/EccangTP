@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import messagebox
 from Eccang_ui import create_eccang_section
-from TP_ui import create_inventory_section
+from TP_ui import create_tp_section
 import TP_tasks
-from styles import btn_params, header_font, title_font
+from styles import title_font
 
 # ======= Utils Func =======
 def run_safe(func, name):
@@ -13,39 +13,12 @@ def run_safe(func, name):
     except Exception as e:
         messagebox.showerror("Error", f"{name} failed ❌\n{e}")
 
-def make_step_frame(parent, text):
-    frame = tk.Frame(
-        parent,
-        bg="#fadee3",  
-        bd=2,
-        relief="ridge",
-        padx=2,
-        pady=3
-    )
-    label = tk.Label(
-        frame,
-        text=text + " 🍉",
-        font=header_font,
-        fg="#143b3b",
-        bg="#fadee3"
-    )
-    label.pack(anchor="w", pady=(0, 1))
-    return frame
-
-def add_task_buttons(frame, tasks):
-    for label, func in tasks:
-        tk.Button(
-            frame,
-            text=label,
-            command=lambda f=func, l=label: run_safe(f, l),
-            **btn_params
-        ).pack(padx=4, pady=2)
 
 # ======= 主窗口 =======
 def create_main_window():
     window = tk.Tk()
     window.title("🍉 Subarashii Melon 🍉")
-    window.geometry("843x580")
+    window.geometry("843x605")
     window.configure(bg="#EDFCA6")
 
     # ======= 标题 =======
@@ -75,7 +48,7 @@ def create_main_window():
 
     # ======= 内容调用 =======
     create_eccang_section(left_frame)
-    create_inventory_section(right_frame)
+    create_tp_section(right_frame)
 
     return window
 

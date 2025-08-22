@@ -5,7 +5,7 @@ from pathlib import Path
 def rename_DXM():
     # Set source and target directories
     source_dir = Path.home() / "Downloads"
-    target_dir = Path(r"C:\Frank\原始数据\店小秘+TP+订单+盘点")
+    target_dir = Path(r"C:\ACT\公用核心\店小秘")
 
     # Ensure the target directory exists
     target_dir.mkdir(parents=True, exist_ok=True)

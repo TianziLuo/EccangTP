@@ -6,7 +6,7 @@ from datetime import datetime
 def copy_download():
     # Configs
     download_dir = Path(os.path.expanduser('~')) / 'Downloads'
-    target_dir = Path(r"C:\Frank\原始数据\易仓下载")
+    target_dir = Path(r"C:\ACT\公用核心\易仓\易仓日常下载")
 
     # List of keywords to search for in file names
     keywords = ["shipment_order","product_csv","库存查询（库位）","产品库存","sku-relation","product-sku-relation"]

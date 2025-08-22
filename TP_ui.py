@@ -1,37 +1,11 @@
 import tkinter as tk
 import TP_tasks as TP_tasks
-from styles import btn_params, header_font
+from styles import header_font
+from ui_utils import make_step_frame, add_task_buttons
 
-def make_step_frame(parent, text, bg_color):
-    frame = tk.Frame(
-        parent,
-        bg=bg_color,
-        bd=2,
-        relief="ridge",
-        padx=6,
-        pady=6
-    )
-    label = tk.Label(
-        frame,
-        text=text,
-        font=header_font,
-        fg="#3b3b3b",
-        bg=bg_color
-    )
-    label.pack(anchor="w", pady=(0, 4))
-    return frame
 
-def add_task_buttons(frame, tasks):
-    for label, func in tasks:
-        tk.Button(
-            frame,
-            text=label,
-            command=func,
-            **btn_params
-        ).pack(padx=35, pady=2)
-
-def create_inventory_section(parent):
-    inv_container = tk.LabelFrame(
+def create_tp_section(parent):
+    tp_container = tk.LabelFrame(
         parent,
         text="🍋 TP",
         font=header_font,
@@ -43,32 +17,36 @@ def create_inventory_section(parent):
         relief="groove",
         labelanchor="n"
     )
-    inv_container.grid(row=0, column=0, sticky="nsew", padx=0, pady=0)
+    tp_container.grid(row=0, column=0, sticky="nsew", padx=0, pady=0)
+    tp_container.columnconfigure(0, weight=1)
 
-    # 让容器内部自动扩展
-    inv_container.columnconfigure(0, weight=1)
-
-    frame4 = make_step_frame(inv_container, "🍋 SKU Mapping", "#dbfdfd")
-    frame4.grid(row=0, column=0, sticky="ew", pady=5)
-    add_task_buttons(frame4, [
+    # SKU Mapping
+    frame1 = make_step_frame(tp_container, "🍋 SKU Mapping", "#dbfdfd")
+    frame1.grid(row=0, column=0, sticky="nsew", pady=5)
+    add_task_buttons(frame1, [
         ("Open 1.1", TP_tasks.step_1_1),
-        ("Generate & Copy SKU Mapping", TP_tasks.step_1_2)
+        ("Open 1.6", TP_tasks.step_1_2),
+        ("Generate & Copy SKU Mapping", TP_tasks.step_1_3)
     ])
 
-    frame5 = make_step_frame(inv_container, "🍋 TP Upload", "#dbfdfd")
-    frame5.grid(row=1, column=0, sticky="ew", pady=5)
-    add_task_buttons(frame5, [
+    # TP Upload
+    frame2 = make_step_frame(tp_container, "🍋 TP Upload", "#dbfdfd")
+    frame2.grid(row=1, column=0, sticky="nsew", pady=5)
+    add_task_buttons(frame2, [
         ("Open 2.1", TP_tasks.step_2_1),
         ("Generate & Upload & Copy TP.csv", TP_tasks.step_2_2),
-        ("Copy SKUINV", TP_tasks.step_2_4),
+        ("Copy SKUINV", TP_tasks.step_2_4)
     ])
 
-    frame6 = make_step_frame(inv_container, "🍋 DXM", "#dbfdfd")
-    frame6.grid(row=2, column=0, sticky="ew", pady=5)
-    add_task_buttons(frame6, [
+    # DXM
+    frame3 = make_step_frame(tp_container, "🍋 DXM", "#dbfdfd")
+    frame3.grid(row=2, column=0, sticky="nsew", pady=5)
+    add_task_buttons(frame3, [
         ("Rename & Open", TP_tasks.step_3_1),
-        ("Generate & Copy Inventory Update", TP_tasks.step_3_3),
+        ("Generate & Copy Inventory Update", TP_tasks.step_3_3)
     ])
 
-    return inv_container
+    for i in range(3):
+        tp_container.rowconfigure(i, weight=1)
 
+    return tp_container

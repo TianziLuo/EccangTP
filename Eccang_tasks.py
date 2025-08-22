@@ -2,9 +2,6 @@ from tkinter import messagebox
 from purchase.func import (
     clean_folder,
     copy_purchase,
-    open_excel,
-    save_cvs,
-    copy_cvs,
 )
 import time
 from Eccang.unzip import unzip
@@ -23,27 +20,10 @@ def run_purchase_files():
         print("✔ Copy Files completed")
         time.sleep(2)
 
-        open_excel()
-        print("✔ Open Excel completed")
-
         messagebox.showinfo("Done", "Folder Updated ✅")
     except Exception as e:
         messagebox.showerror("Error", f"❌ Folder Updated failed:\n{e}")
 
-
-def run_save_copy_cvs():
-    print("🍉 Running: Save CSV")
-    try:
-        save_cvs()
-        print("✔ Save As completed")
-        time.sleep(1)
-
-        copy_cvs()
-        print("✔ Copy CSV completed")
-        
-        messagebox.showinfo("Done", "CSV saved and copied✅")
-    except Exception as e:
-        messagebox.showerror("Error", f"Process CSV failed:\n{e}")
 
 def step2_to_4_all():
     print("🍉 Running: Step 2 ➜ 4 (Unzip ➜ Convert ➜ Rename)")
