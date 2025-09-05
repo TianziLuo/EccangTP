@@ -11,8 +11,8 @@ from utils.download_rename import rename_DXM
 downloads = Path.home() / "Downloads"
 
 # === Step 1 ===
-def step_1_1(): open_excel_file(r"C:\Frank\1.1_核心.xlsx")
-def step_1_2(): open_excel_file(r"C:\Frank\1.6_FBA Listing.xlsx")
+def step_1_1(): open_excel_file(r"C:\ACT\公用核心\1.1_核心.xlsx")
+def step_1_2(): open_excel_file(r"C:\ACT\公用核心\1.6_FBA Listing.xlsx")
 def step_1_3(): 
 
     # SKU mapping file out
@@ -27,10 +27,10 @@ def step_1_3():
     )
 
 # === Step 2 ===
-def step_2_1(): open_excel_file(r"C:\Frank\2.1_易仓管理.xlsx")
+def step_2_1(): open_excel_file(r"C:\ACT\公用核心\2.1_易仓管理.xlsx")
 def step_2_2():
     generate_tp_csv(
-        source_path=r"C:\Frank\2.1_易仓管理.xlsx",
+        source_path=r"C:\ACT\公用核心\2.1_易仓管理.xlsx",
         sheet_name="易仓进TP",
         template_path=r"C:\Template\TP-Upload.csv",
         output_path=downloads / "TP-Upload.csv"
@@ -82,12 +82,12 @@ def step_3_1():
 
     time.sleep(1)
 
-    open_excel_file(r"C:\Frank\2.2_店小秘.xlsx")
+    open_excel_file(r"C:\ACT\公用核心\2.2_店小秘.xlsx")
 
 def step_3_3():
     output = downloads / "店小秘 更新库存.xlsx"
     update_inventory_excel(
-        source_path=r"C:\Frank\2.2_店小秘.xlsx",
+        source_path=r"C:\ACT\公用核心\2.2_店小秘.xlsx",
         sheet_name="盘点",
         template_path=r"C:\Template\店小秘 更新库存.xlsx",
         output_path=output
