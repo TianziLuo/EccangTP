@@ -3,7 +3,7 @@ header_font = ("Segoe UI", 12, "bold")
 title_font = ("Segoe UI", 20, "bold")
 
 btn_params = {
-    "bg": "#ffb7c7",             
+    "bg": "#fdc3cf",             
     "fg": "#3b3b3b",             
     "activebackground": "#eb759c",  
     "activeforeground": "#ffffff",  # hover 

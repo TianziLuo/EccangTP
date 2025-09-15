@@ -925,6 +925,7 @@ imported by:
 <span class="moduletype">NamespacePackage</span>  <div class="import">
 imported by:
     <a href="#Eccang.copy_download">Eccang.copy_download</a>
+ &#8226;   <a href="#Eccang.purchase">Eccang.purchase</a>
  &#8226;   <a href="#Eccang.rename">Eccang.rename</a>
  &#8226;   <a href="#Eccang.unzip">Eccang.unzip</a>
  &#8226;   <a href="#Eccang.xls2csv">Eccang.xls2csv</a>
@@ -947,7 +948,81 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#Eccang_tasks">Eccang_tasks</a>
+    <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="Eccang.purchase"></a>
+  <a target="code" href="-" type="text/plain"><tt>Eccang.purchase</tt></a>
+<span class="moduletype">NamespacePackage</span>  <div class="import">
+imports:
+    <a href="#Eccang">Eccang</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#Eccang.purchase.func">Eccang.purchase.func</a>
+ &#8226;   <a href="#Eccang.purchase.i">Eccang.purchase.i</a>
+ &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="Eccang.purchase.func"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/Eccang/purchase/func.py" type="text/plain"><tt>Eccang.purchase.func</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#Eccang.purchase">Eccang.purchase</a>
+ &#8226;   <a href="#Eccang.purchase.i">Eccang.purchase.i</a>
+ &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="Eccang.purchase.i"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/Eccang/purchase/i.py" type="text/plain"><tt>Eccang.purchase.i</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#Eccang.purchase">Eccang.purchase</a>
+ &#8226;   <a href="#glob">glob</a>
+ &#8226;   <a href="#os">os</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#Eccang.purchase.func">Eccang.purchase.func</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="Eccang.purchase.ii"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/Eccang/purchase/ii.py" type="text/plain"><tt>Eccang.purchase.ii</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#Eccang.purchase">Eccang.purchase</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#shutil">shutil</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#Eccang.purchase.func">Eccang.purchase.func</a>
 
   </div>
 
@@ -965,7 +1040,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#Eccang_tasks">Eccang_tasks</a>
+    <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
 
   </div>
 
@@ -984,7 +1059,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#Eccang_tasks">Eccang_tasks</a>
+    <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
 
   </div>
 
@@ -1002,50 +1077,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#Eccang_tasks">Eccang_tasks</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="Eccang_tasks"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/Eccang_tasks.py" type="text/plain"><tt>Eccang_tasks</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#Eccang.copy_download">Eccang.copy_download</a>
- &#8226;   <a href="#Eccang.rename">Eccang.rename</a>
- &#8226;   <a href="#Eccang.unzip">Eccang.unzip</a>
- &#8226;   <a href="#Eccang.xls2csv">Eccang.xls2csv</a>
- &#8226;   <a href="#purchase.func">purchase.func</a>
- &#8226;   <a href="#time">time</a>
- &#8226;   <a href="#tkinter">tkinter</a>
- &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#Eccang_ui">Eccang_ui</a>
- &#8226;   <a href="#ui_utils">ui_utils</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="Eccang_ui"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/Eccang_ui.py" type="text/plain"><tt>Eccang_ui</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#Eccang_tasks">Eccang_tasks</a>
- &#8226;   <a href="#styles">styles</a>
- &#8226;   <a href="#tkinter">tkinter</a>
- &#8226;   <a href="#ui_utils">ui_utils</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#ui">ui</a>
+    <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
 
   </div>
 
@@ -3315,13 +3347,75 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="TP_tasks"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/TP_tasks.py" type="text/plain"><tt>TP_tasks</tt></a>
+  <a name="UI_section"></a>
+  <a target="code" href="-" type="text/plain"><tt>UI_section</tt></a>
+<span class="moduletype">NamespacePackage</span>  <div class="import">
+imported by:
+    <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
+ &#8226;   <a href="#UI_section.Eccang_ui">UI_section.Eccang_ui</a>
+ &#8226;   <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
+ &#8226;   <a href="#UI_section.TP_ui">UI_section.TP_ui</a>
+ &#8226;   <a href="#UI_section.refresh_tasks">UI_section.refresh_tasks</a>
+ &#8226;   <a href="#UI_section.refresh_ui">UI_section.refresh_ui</a>
+ &#8226;   <a href="#UI_section.ui_utils">UI_section.ui_utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="UI_section.Eccang_tasks"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/UI_section/Eccang_tasks.py" type="text/plain"><tt>UI_section.Eccang_tasks</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#pathlib">pathlib</a>
+    <a href="#Eccang.copy_download">Eccang.copy_download</a>
+ &#8226;   <a href="#Eccang.purchase.func">Eccang.purchase.func</a>
+ &#8226;   <a href="#Eccang.rename">Eccang.rename</a>
+ &#8226;   <a href="#Eccang.unzip">Eccang.unzip</a>
+ &#8226;   <a href="#Eccang.xls2csv">Eccang.xls2csv</a>
+ &#8226;   <a href="#UI_section">UI_section</a>
  &#8226;   <a href="#time">time</a>
- &#8226;   <a href="#utils.SKU_mapping">utils.SKU_mapping</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#UI_section.Eccang_ui">UI_section.Eccang_ui</a>
+ &#8226;   <a href="#UI_section.ui_utils">UI_section.ui_utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="UI_section.Eccang_ui"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/UI_section/Eccang_ui.py" type="text/plain"><tt>UI_section.Eccang_ui</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#UI_section">UI_section</a>
+ &#8226;   <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
+ &#8226;   <a href="#UI_section.ui_utils">UI_section.ui_utils</a>
+ &#8226;   <a href="#styles">styles</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ui">ui</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="UI_section.TP_tasks"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/UI_section/TP_tasks.py" type="text/plain"><tt>UI_section.TP_tasks</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#UI_section">UI_section</a>
+ &#8226;   <a href="#config_paths">config_paths</a>
+ &#8226;   <a href="#time">time</a>
  &#8226;   <a href="#utils.TP_upload_utils">utils.TP_upload_utils</a>
  &#8226;   <a href="#utils.copy_file_utils">utils.copy_file_utils</a>
  &#8226;   <a href="#utils.create_file_utils">utils.create_file_utils</a>
@@ -3331,28 +3425,91 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#TP_ui">TP_ui</a>
- &#8226;   <a href="#ui">ui</a>
- &#8226;   <a href="#ui_utils">ui_utils</a>
+    <a href="#UI_section.TP_ui">UI_section.TP_ui</a>
+ &#8226;   <a href="#UI_section.ui_utils">UI_section.ui_utils</a>
 
   </div>
 
 </div>
 
 <div class="node">
-  <a name="TP_ui"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/TP_ui.py" type="text/plain"><tt>TP_ui</tt></a>
+  <a name="UI_section.TP_ui"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/UI_section/TP_ui.py" type="text/plain"><tt>UI_section.TP_ui</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#TP_tasks">TP_tasks</a>
+    <a href="#UI_section">UI_section</a>
+ &#8226;   <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
+ &#8226;   <a href="#UI_section.ui_utils">UI_section.ui_utils</a>
  &#8226;   <a href="#styles">styles</a>
  &#8226;   <a href="#tkinter">tkinter</a>
- &#8226;   <a href="#ui_utils">ui_utils</a>
 
   </div>
   <div class="import">
 imported by:
     <a href="#ui">ui</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="UI_section.refresh_tasks"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/UI_section/refresh_tasks.py" type="text/plain"><tt>UI_section.refresh_tasks</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#UI_section">UI_section</a>
+ &#8226;   <a href="#config_paths">config_paths</a>
+ &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#utils.SKU_mapping">utils.SKU_mapping</a>
+ &#8226;   <a href="#utils.copy_file_utils">utils.copy_file_utils</a>
+ &#8226;   <a href="#utils.open_excel_utils">utils.open_excel_utils</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#UI_section.refresh_ui">UI_section.refresh_ui</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="UI_section.refresh_ui"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/UI_section/refresh_ui.py" type="text/plain"><tt>UI_section.refresh_ui</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#UI_section">UI_section</a>
+ &#8226;   <a href="#UI_section.refresh_tasks">UI_section.refresh_tasks</a>
+ &#8226;   <a href="#UI_section.ui_utils">UI_section.ui_utils</a>
+ &#8226;   <a href="#styles">styles</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ui">ui</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="UI_section.ui_utils"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/UI_section/ui_utils.py" type="text/plain"><tt>UI_section.ui_utils</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#UI_section">UI_section</a>
+ &#8226;   <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
+ &#8226;   <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
+ &#8226;   <a href="#styles">styles</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#UI_section.Eccang_ui">UI_section.Eccang_ui</a>
+ &#8226;   <a href="#UI_section.TP_ui">UI_section.TP_ui</a>
+ &#8226;   <a href="#UI_section.refresh_ui">UI_section.refresh_ui</a>
 
   </div>
 
@@ -7959,6 +8116,25 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="config_paths"></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/config_paths.py" type="text/plain"><tt>config_paths</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#configparser">configparser</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
+ &#8226;   <a href="#UI_section.refresh_tasks">UI_section.refresh_tasks</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="configparser"></a>
   <a target="code" href="///C:/Users/monica/AppData/Local/Programs/Python/Python313/Lib/configparser.py" type="text/plain"><tt>configparser</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -7977,7 +8153,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#setuptools._distutils.dist">setuptools._distutils.dist</a>
+    <a href="#config_paths">config_paths</a>
+ &#8226;   <a href="#setuptools._distutils.dist">setuptools._distutils.dist</a>
  &#8226;   <a href="#setuptools.command.setopt">setuptools.command.setopt</a>
  &#8226;   <a href="#setuptools.config.expand">setuptools.config.expand</a>
  &#8226;   <a href="#setuptools.dist">setuptools.dist</a>
@@ -8515,6 +8692,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#Eccang.copy_download">Eccang.copy_download</a>
+ &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
  &#8226;   <a href="#Eccang.unzip">Eccang.unzip</a>
  &#8226;   <a href="#PIL._imagingcms">PIL._imagingcms</a>
  &#8226;   <a href="#_strptime">_strptime</a>
@@ -8589,7 +8767,6 @@ imported by:
  &#8226;   <a href="#playwright._impl._connection">playwright._impl._connection</a>
  &#8226;   <a href="#playwright._impl._js_handle">playwright._impl._js_handle</a>
  &#8226;   <a href="#playwright.sync_api._generated">playwright.sync_api._generated</a>
- &#8226;   <a href="#purchase.ii">purchase.ii</a>
  &#8226;   <a href="#pytz">pytz</a>
  &#8226;   <a href="#pytz.tzfile">pytz.tzfile</a>
  &#8226;   <a href="#pytz.tzinfo">pytz.tzinfo</a>
@@ -12765,10 +12942,10 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#pathlib._abc">pathlib._abc</a>
+    <a href="#Eccang.purchase.i">Eccang.purchase.i</a>
+ &#8226;   <a href="#pathlib._abc">pathlib._abc</a>
  &#8226;   <a href="#pathlib._local">pathlib._local</a>
  &#8226;   <a href="#pdb">pdb</a>
- &#8226;   <a href="#purchase.i">purchase.i</a>
  &#8226;   <a href="#setuptools._distutils.command.sdist">setuptools._distutils.command.sdist</a>
  &#8226;   <a href="#setuptools._vendor.wheel.cli.convert">setuptools._vendor.wheel.cli.convert</a>
  &#8226;   <a href="#setuptools.command.bdist_wheel">setuptools.command.bdist_wheel</a>
@@ -27288,6 +27465,8 @@ imports:
   <div class="import">
 imported by:
     <a href="#Eccang.copy_download">Eccang.copy_download</a>
+ &#8226;   <a href="#Eccang.purchase.i">Eccang.purchase.i</a>
+ &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
  &#8226;   <a href="#Eccang.xls2csv">Eccang.xls2csv</a>
  &#8226;   <a href="#EccangTP_main.py">EccangTP_main.py</a>
  &#8226;   <a href="#PIL.BlpImagePlugin">PIL.BlpImagePlugin</a>
@@ -27452,8 +27631,6 @@ imported by:
  &#8226;   <a href="#playwright._impl._transport">playwright._impl._transport</a>
  &#8226;   <a href="#playwright._impl._writable_stream">playwright._impl._writable_stream</a>
  &#8226;   <a href="#posixpath">posixpath</a>
- &#8226;   <a href="#purchase.i">purchase.i</a>
- &#8226;   <a href="#purchase.ii">purchase.ii</a>
  &#8226;   <a href="#py_compile">py_compile</a>
  &#8226;   <a href="#pycparser.ply.lex">pycparser.ply.lex</a>
  &#8226;   <a href="#pydoc">pydoc</a>
@@ -40366,10 +40543,11 @@ imports:
   <div class="import">
 imported by:
     <a href="#Eccang.copy_download">Eccang.copy_download</a>
+ &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
  &#8226;   <a href="#Eccang.rename">Eccang.rename</a>
  &#8226;   <a href="#Eccang.unzip">Eccang.unzip</a>
  &#8226;   <a href="#Eccang.xls2csv">Eccang.xls2csv</a>
- &#8226;   <a href="#TP_tasks">TP_tasks</a>
+ &#8226;   <a href="#config_paths">config_paths</a>
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
  &#8226;   <a href="#importlib.resources.abc">importlib.resources.abc</a>
@@ -40410,7 +40588,6 @@ imported by:
  &#8226;   <a href="#playwright._impl._video">playwright._impl._video</a>
  &#8226;   <a href="#playwright._impl._writable_stream">playwright._impl._writable_stream</a>
  &#8226;   <a href="#playwright.sync_api._generated">playwright.sync_api._generated</a>
- &#8226;   <a href="#purchase.ii">purchase.ii</a>
  &#8226;   <a href="#setuptools._distutils.compilers.C.base">setuptools._distutils.compilers.C.base</a>
  &#8226;   <a href="#setuptools._distutils.dir_util">setuptools._distutils.dir_util</a>
  &#8226;   <a href="#setuptools._distutils.dist">setuptools._distutils.dist</a>
@@ -42294,75 +42471,6 @@ imported by:
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
     <a href="#numpy.testing._private.utils">numpy.testing._private.utils</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="purchase"></a>
-  <a target="code" href="-" type="text/plain"><tt>purchase</tt></a>
-<span class="moduletype">NamespacePackage</span>  <div class="import">
-imported by:
-    <a href="#purchase.func">purchase.func</a>
- &#8226;   <a href="#purchase.i">purchase.i</a>
- &#8226;   <a href="#purchase.ii">purchase.ii</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="purchase.func"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/purchase/func.py" type="text/plain"><tt>purchase.func</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#purchase">purchase</a>
- &#8226;   <a href="#purchase.i">purchase.i</a>
- &#8226;   <a href="#purchase.ii">purchase.ii</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#Eccang_tasks">Eccang_tasks</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="purchase.i"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/purchase/i.py" type="text/plain"><tt>purchase.i</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#glob">glob</a>
- &#8226;   <a href="#os">os</a>
- &#8226;   <a href="#purchase">purchase</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#purchase.func">purchase.func</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="purchase.ii"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/purchase/ii.py" type="text/plain"><tt>purchase.ii</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#datetime">datetime</a>
- &#8226;   <a href="#os">os</a>
- &#8226;   <a href="#pathlib">pathlib</a>
- &#8226;   <a href="#purchase">purchase</a>
- &#8226;   <a href="#shutil">shutil</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#purchase.func">purchase.func</a>
 
   </div>
 
@@ -48039,6 +48147,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#Eccang.copy_download">Eccang.copy_download</a>
+ &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
  &#8226;   <a href="#Eccang.rename">Eccang.rename</a>
  &#8226;   <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
  &#8226;   <a href="#PIL.ImageShow">PIL.ImageShow</a>
@@ -48056,7 +48165,6 @@ imported by:
  &#8226;   <a href="#pandas.io.formats.console">pandas.io.formats.console</a>
  &#8226;   <a href="#pandas.io.formats.format">pandas.io.formats.format</a>
  &#8226;   <a href="#pandas.io.formats.string">pandas.io.formats.string</a>
- &#8226;   <a href="#purchase.ii">purchase.ii</a>
  &#8226;   <a href="#setuptools._distutils.spawn">setuptools._distutils.spawn</a>
  &#8226;   <a href="#setuptools._vendor.backports.tarfile">setuptools._vendor.backports.tarfile</a>
  &#8226;   <a href="#setuptools._vendor.jaraco.context">setuptools._vendor.jaraco.context</a>
@@ -48687,10 +48795,11 @@ imported by:
   <a target="code" href="///C:/ProgramData/CG/EccangTP/styles.py" type="text/plain"><tt>styles</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imported by:
-    <a href="#Eccang_ui">Eccang_ui</a>
- &#8226;   <a href="#TP_ui">TP_ui</a>
+    <a href="#UI_section.Eccang_ui">UI_section.Eccang_ui</a>
+ &#8226;   <a href="#UI_section.TP_ui">UI_section.TP_ui</a>
+ &#8226;   <a href="#UI_section.refresh_ui">UI_section.refresh_ui</a>
+ &#8226;   <a href="#UI_section.ui_utils">UI_section.ui_utils</a>
  &#8226;   <a href="#ui">ui</a>
- &#8226;   <a href="#ui_utils">ui_utils</a>
 
   </div>
 
@@ -48843,6 +48952,7 @@ imported by:
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#config_paths">config_paths</a>
  &#8226;   <a href="#configparser">configparser</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#ctypes">ctypes</a>
@@ -49405,10 +49515,11 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#Eccang_tasks">Eccang_tasks</a>
- &#8226;   <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
+    <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
  &#8226;   <a href="#PIL.PdfParser">PIL.PdfParser</a>
- &#8226;   <a href="#TP_tasks">TP_tasks</a>
+ &#8226;   <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
+ &#8226;   <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
+ &#8226;   <a href="#UI_section.refresh_tasks">UI_section.refresh_tasks</a>
  &#8226;   <a href="#_datetime">_datetime</a>
  &#8226;   <a href="#_pydatetime">_pydatetime</a>
  &#8226;   <a href="#_pyrepl.unix_console">_pyrepl.unix_console</a>
@@ -49489,14 +49600,15 @@ imports:
   <div class="import">
 imported by:
     <a href="#EccangTP_main.py">EccangTP_main.py</a>
- &#8226;   <a href="#Eccang_tasks">Eccang_tasks</a>
- &#8226;   <a href="#Eccang_ui">Eccang_ui</a>
- &#8226;   <a href="#TP_ui">TP_ui</a>
+ &#8226;   <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
+ &#8226;   <a href="#UI_section.Eccang_ui">UI_section.Eccang_ui</a>
+ &#8226;   <a href="#UI_section.TP_ui">UI_section.TP_ui</a>
+ &#8226;   <a href="#UI_section.refresh_ui">UI_section.refresh_ui</a>
+ &#8226;   <a href="#UI_section.ui_utils">UI_section.ui_utils</a>
  &#8226;   <a href="#tkinter.commondialog">tkinter.commondialog</a>
  &#8226;   <a href="#tkinter.constants">tkinter.constants</a>
  &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
  &#8226;   <a href="#ui">ui</a>
- &#8226;   <a href="#ui_utils">ui_utils</a>
 
   </div>
 
@@ -49546,7 +49658,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#EccangTP_main.py">EccangTP_main.py</a>
- &#8226;   <a href="#Eccang_tasks">Eccang_tasks</a>
+ &#8226;   <a href="#UI_section.Eccang_tasks">UI_section.Eccang_tasks</a>
  &#8226;   <a href="#tkinter">tkinter</a>
  &#8226;   <a href="#ui">ui</a>
 
@@ -50492,9 +50604,9 @@ imported by:
   <a target="code" href="///C:/ProgramData/CG/EccangTP/ui.py" type="text/plain"><tt>ui</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#Eccang_ui">Eccang_ui</a>
- &#8226;   <a href="#TP_tasks">TP_tasks</a>
- &#8226;   <a href="#TP_ui">TP_ui</a>
+    <a href="#UI_section.Eccang_ui">UI_section.Eccang_ui</a>
+ &#8226;   <a href="#UI_section.TP_ui">UI_section.TP_ui</a>
+ &#8226;   <a href="#UI_section.refresh_ui">UI_section.refresh_ui</a>
  &#8226;   <a href="#styles">styles</a>
  &#8226;   <a href="#tkinter">tkinter</a>
  &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
@@ -50503,26 +50615,6 @@ imports:
   <div class="import">
 imported by:
     <a href="#EccangTP_main.py">EccangTP_main.py</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="ui_utils"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/ui_utils.py" type="text/plain"><tt>ui_utils</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#Eccang_tasks">Eccang_tasks</a>
- &#8226;   <a href="#TP_tasks">TP_tasks</a>
- &#8226;   <a href="#styles">styles</a>
- &#8226;   <a href="#tkinter">tkinter</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#Eccang_ui">Eccang_ui</a>
- &#8226;   <a href="#TP_ui">TP_ui</a>
 
   </div>
 
@@ -51040,7 +51132,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#TP_tasks">TP_tasks</a>
+    <a href="#UI_section.refresh_tasks">UI_section.refresh_tasks</a>
 
   </div>
 
@@ -51058,7 +51150,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#TP_tasks">TP_tasks</a>
+    <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
 
   </div>
 
@@ -51077,7 +51169,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#TP_tasks">TP_tasks</a>
+    <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
+ &#8226;   <a href="#UI_section.refresh_tasks">UI_section.refresh_tasks</a>
 
   </div>
 
@@ -51096,7 +51189,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#TP_tasks">TP_tasks</a>
+    <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
 
   </div>
 
@@ -51115,7 +51208,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#TP_tasks">TP_tasks</a>
+    <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
 
   </div>
 
@@ -51133,7 +51226,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#TP_tasks">TP_tasks</a>
+    <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
+ &#8226;   <a href="#UI_section.refresh_tasks">UI_section.refresh_tasks</a>
 
   </div>
 

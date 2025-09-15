@@ -31,7 +31,7 @@ def verify_license():
         return False, "❌ Invalid expiration date format."
 
     # Validate license code
-    secret = "Subarashii_Melon"  # Must match the generator
+    secret = "Subarashii_Melon"  
     expected_code = hashlib.sha256(f"{user}{secret}".encode()).hexdigest()[:16]
 
     if license_code != expected_code:

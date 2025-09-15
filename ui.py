@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
-from Eccang_ui import create_eccang_section
-from TP_ui import create_tp_section
-import TP_tasks
+from UI_section.Eccang_ui import create_eccang_section
+from UI_section.TP_ui import create_tp_section
+from UI_section.refresh_ui import create_refresh_section
 from styles import title_font
 
 # ======= Utils Func =======
@@ -13,15 +13,14 @@ def run_safe(func, name):
     except Exception as e:
         messagebox.showerror("Error", f"{name} failed ❌\n{e}")
 
-
-# ======= 主窗口 =======
+# ======= Main Window =======
 def create_main_window():
     window = tk.Tk()
     window.title("🍉 Subarashii Melon 🍉")
-    window.geometry("843x605")
+    window.geometry("1250x645")  # Three-column width
     window.configure(bg="#EDFCA6")
 
-    # ======= 标题 =======
+    # ======= Title =======
     tk.Label(
         window,
         text="🍉 EccangTP Watermelon 🍉",
@@ -30,29 +29,34 @@ def create_main_window():
         bg="#EDFCA6"
     ).pack(pady=6)
 
-    # ======= 主容器，使用 grid 布局划分左右两块 =======
+    # ======= Main Container =======
     main_frame = tk.Frame(window, bg="#EDFCA6")
     main_frame.pack(fill="both", expand=True, padx=23, pady=10)
 
-    main_frame.columnconfigure(0, weight=1)  # 左列权重1
-    main_frame.columnconfigure(1, weight=1)  # 右列权重1
+    # 3-column layout
+    main_frame.columnconfigure(0, weight=1)  # Left column: Eccang
+    main_frame.columnconfigure(1, weight=1)  # Middle column: TP
+    main_frame.columnconfigure(2, weight=1)  # Right column: Refresh
     main_frame.rowconfigure(0, weight=1)
 
-    # ======= 左侧区域 (Eccang) =======
+    # ======= Left column (Eccang) =======
     left_frame = tk.Frame(main_frame, bg="#EDFCA6")
     left_frame.grid(row=0, column=0, sticky="nsew", padx=(0, 5))
-
-    # ======= 右侧区域 (Inventory) =======
-    right_frame = tk.Frame(main_frame, bg="#EDFCA6")
-    right_frame.grid(row=0, column=1, sticky="nsew", padx=(5, 0))
-
-    # ======= 内容调用 =======
     create_eccang_section(left_frame)
-    create_tp_section(right_frame)
+
+    # ======= Middle column (TP) =======
+    middle_frame = tk.Frame(main_frame, bg="#EDFCA6")
+    middle_frame.grid(row=0, column=1, sticky="nsew", padx=5)
+    create_tp_section(middle_frame)
+
+    # ======= Right column (Refresh) =======
+    right_frame = tk.Frame(main_frame, bg="#EDFCA6")
+    right_frame.grid(row=0, column=2, sticky="nsew", padx=(5, 0))
+    create_refresh_section(right_frame)
 
     return window
 
-''''
+'''
 if __name__ == "__main__":
     create_main_window().mainloop()
 '''
