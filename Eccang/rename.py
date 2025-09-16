@@ -1,9 +1,11 @@
-from pathlib import Path
 import shutil
+from config_paths import get_eccang_paths
+
+paths = get_eccang_paths()
 
 def rename():
     def get_filename():
-        downloads = Path.home() / "Downloads"
+        downloads = paths["downloads"]
         prefix = "产品库存"
         matched_files = [
             f for f in downloads.glob("*.zip") if f.name.startswith(prefix)
@@ -25,7 +27,7 @@ def rename():
         return trimmed_name
 
     def rename_unzip_file(new_name: str):
-        downloads = Path.home() / "Downloads"
+        downloads = paths["downloads"]
 
         # Match files containing "product_inventory" (any extension)
         matched_files = [

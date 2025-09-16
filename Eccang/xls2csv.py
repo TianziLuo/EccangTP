@@ -1,10 +1,12 @@
 import os
 from pathlib import Path
+from config_paths import get_eccang_paths
 
+paths = get_eccang_paths()
 
 def xls2csv():
     # Set the target folder path
-    folder_path = Path.home() / "Downloads"
+    folder_path = paths["downloads"]
 
     # Find all matching files
     matched_files = []

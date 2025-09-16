@@ -1,8 +1,6 @@
 from tkinter import messagebox
-from Eccang.purchase.func import (
-    clean_folder,
-    copy_purchase,
-)
+from Eccang.purchase import clean_folder,copy_purchase
+
 import time
 from Eccang.unzip import unzip
 from Eccang.xls2csv import xls2csv

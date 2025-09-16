@@ -1,12 +1,15 @@
 import zipfile
 from pathlib import Path
 from datetime import datetime
+from config_paths import get_eccang_paths
+
+paths = get_eccang_paths()
 
 def unzip():
     # ------ configs ------
     KEYWORDS = ["已映射关系列表", "未映射和待确认关系列表", "产品库存"]
 
-    DOWNLOADS = Path.home() / "Downloads"
+    DOWNLOADS = paths["downloads"]
 
     # Find the most recent ZIP 
     def find_zip(keyword: str):

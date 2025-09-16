@@ -940,6 +940,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#Eccang">Eccang</a>
+ &#8226;   <a href="#config_paths">config_paths</a>
  &#8226;   <a href="#datetime">datetime</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pathlib">pathlib</a>
@@ -956,30 +957,16 @@ imported by:
 
 <div class="node">
   <a name="Eccang.purchase"></a>
-  <a target="code" href="-" type="text/plain"><tt>Eccang.purchase</tt></a>
-<span class="moduletype">NamespacePackage</span>  <div class="import">
-imports:
-    <a href="#Eccang">Eccang</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#Eccang.purchase.func">Eccang.purchase.func</a>
- &#8226;   <a href="#Eccang.purchase.i">Eccang.purchase.i</a>
- &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="Eccang.purchase.func"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/Eccang/purchase/func.py" type="text/plain"><tt>Eccang.purchase.func</tt></a>
+  <a target="code" href="///C:/ProgramData/CG/EccangTP/Eccang/purchase.py" type="text/plain"><tt>Eccang.purchase</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#Eccang.purchase">Eccang.purchase</a>
- &#8226;   <a href="#Eccang.purchase.i">Eccang.purchase.i</a>
- &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
+    <a href="#Eccang">Eccang</a>
+ &#8226;   <a href="#config_paths">config_paths</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#glob">glob</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#shutil">shutil</a>
 
   </div>
   <div class="import">
@@ -991,50 +978,12 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="Eccang.purchase.i"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/Eccang/purchase/i.py" type="text/plain"><tt>Eccang.purchase.i</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#Eccang.purchase">Eccang.purchase</a>
- &#8226;   <a href="#glob">glob</a>
- &#8226;   <a href="#os">os</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#Eccang.purchase.func">Eccang.purchase.func</a>
-
-  </div>
-
-</div>
-
-<div class="node">
-  <a name="Eccang.purchase.ii"></a>
-  <a target="code" href="///C:/ProgramData/CG/EccangTP/Eccang/purchase/ii.py" type="text/plain"><tt>Eccang.purchase.ii</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imports:
-    <a href="#Eccang.purchase">Eccang.purchase</a>
- &#8226;   <a href="#datetime">datetime</a>
- &#8226;   <a href="#os">os</a>
- &#8226;   <a href="#pathlib">pathlib</a>
- &#8226;   <a href="#shutil">shutil</a>
-
-  </div>
-  <div class="import">
-imported by:
-    <a href="#Eccang.purchase.func">Eccang.purchase.func</a>
-
-  </div>
-
-</div>
-
-<div class="node">
   <a name="Eccang.rename"></a>
   <a target="code" href="///C:/ProgramData/CG/EccangTP/Eccang/rename.py" type="text/plain"><tt>Eccang.rename</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#Eccang">Eccang</a>
- &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#config_paths">config_paths</a>
  &#8226;   <a href="#shutil">shutil</a>
 
   </div>
@@ -1052,6 +1001,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#Eccang">Eccang</a>
+ &#8226;   <a href="#config_paths">config_paths</a>
  &#8226;   <a href="#datetime">datetime</a>
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#zipfile">zipfile</a>
@@ -1071,6 +1021,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#Eccang">Eccang</a>
+ &#8226;   <a href="#config_paths">config_paths</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pathlib">pathlib</a>
 
@@ -3369,7 +3320,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#Eccang.copy_download">Eccang.copy_download</a>
- &#8226;   <a href="#Eccang.purchase.func">Eccang.purchase.func</a>
+ &#8226;   <a href="#Eccang.purchase">Eccang.purchase</a>
  &#8226;   <a href="#Eccang.rename">Eccang.rename</a>
  &#8226;   <a href="#Eccang.unzip">Eccang.unzip</a>
  &#8226;   <a href="#Eccang.xls2csv">Eccang.xls2csv</a>
@@ -8127,7 +8078,12 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
+    <a href="#Eccang.copy_download">Eccang.copy_download</a>
+ &#8226;   <a href="#Eccang.purchase">Eccang.purchase</a>
+ &#8226;   <a href="#Eccang.rename">Eccang.rename</a>
+ &#8226;   <a href="#Eccang.unzip">Eccang.unzip</a>
+ &#8226;   <a href="#Eccang.xls2csv">Eccang.xls2csv</a>
+ &#8226;   <a href="#UI_section.TP_tasks">UI_section.TP_tasks</a>
  &#8226;   <a href="#UI_section.refresh_tasks">UI_section.refresh_tasks</a>
 
   </div>
@@ -8692,7 +8648,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#Eccang.copy_download">Eccang.copy_download</a>
- &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
+ &#8226;   <a href="#Eccang.purchase">Eccang.purchase</a>
  &#8226;   <a href="#Eccang.unzip">Eccang.unzip</a>
  &#8226;   <a href="#PIL._imagingcms">PIL._imagingcms</a>
  &#8226;   <a href="#_strptime">_strptime</a>
@@ -12942,7 +12898,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#Eccang.purchase.i">Eccang.purchase.i</a>
+    <a href="#Eccang.purchase">Eccang.purchase</a>
  &#8226;   <a href="#pathlib._abc">pathlib._abc</a>
  &#8226;   <a href="#pathlib._local">pathlib._local</a>
  &#8226;   <a href="#pdb">pdb</a>
@@ -27465,8 +27421,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#Eccang.copy_download">Eccang.copy_download</a>
- &#8226;   <a href="#Eccang.purchase.i">Eccang.purchase.i</a>
- &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
+ &#8226;   <a href="#Eccang.purchase">Eccang.purchase</a>
  &#8226;   <a href="#Eccang.xls2csv">Eccang.xls2csv</a>
  &#8226;   <a href="#EccangTP_main.py">EccangTP_main.py</a>
  &#8226;   <a href="#PIL.BlpImagePlugin">PIL.BlpImagePlugin</a>
@@ -40543,8 +40498,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#Eccang.copy_download">Eccang.copy_download</a>
- &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
- &#8226;   <a href="#Eccang.rename">Eccang.rename</a>
+ &#8226;   <a href="#Eccang.purchase">Eccang.purchase</a>
  &#8226;   <a href="#Eccang.unzip">Eccang.unzip</a>
  &#8226;   <a href="#Eccang.xls2csv">Eccang.xls2csv</a>
  &#8226;   <a href="#config_paths">config_paths</a>
@@ -48147,7 +48101,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#Eccang.copy_download">Eccang.copy_download</a>
- &#8226;   <a href="#Eccang.purchase.ii">Eccang.purchase.ii</a>
+ &#8226;   <a href="#Eccang.purchase">Eccang.purchase</a>
  &#8226;   <a href="#Eccang.rename">Eccang.rename</a>
  &#8226;   <a href="#PIL.EpsImagePlugin">PIL.EpsImagePlugin</a>
  &#8226;   <a href="#PIL.ImageShow">PIL.ImageShow</a>

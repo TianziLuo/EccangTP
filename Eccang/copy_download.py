@@ -2,11 +2,14 @@ import os
 import shutil
 from pathlib import Path
 from datetime import datetime
+from config_paths import get_eccang_paths
+
+paths = get_eccang_paths()
 
 def copy_download():
     # Configs
-    download_dir = Path(os.path.expanduser('~')) / 'Downloads'
-    target_dir = Path(r"C:\ACT\公用核心\易仓\易仓日常下载")
+    download_dir = paths["downloads"]
+    target_dir = paths["copy_download"]
 
     # List of keywords to search for in file names
     keywords = ["shipment_order","product_csv","库存查询（库位）","产品库存","sku-relation","product-sku-relation"]
