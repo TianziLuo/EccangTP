@@ -3,29 +3,33 @@ import time
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
 import win32com.client as win32
+from pathlib import Path
+from config_paths import get_refresh_paths
+
 
 def SKU_out():
-    # ========= Path configuration =========
-    base_name      = "上传易仓SKU映射关系"
-    downloads_dir  = os.path.join(os.path.expanduser("~"), "Downloads")
-    xlsx_out_path  = os.path.join(downloads_dir, f"{base_name}.xlsx")
-    xls_out_path   = os.path.join(downloads_dir, f"{base_name}.xls")
+    paths = get_refresh_paths()
 
-    SOURCE_PATH    = r"C:\ACT\公用核心\1.6_FBA Listing.xlsx"
-    TEMPLATE_PATH  = r"C:\Template\上传易仓SKU映射关系.xlsx"
-    SHEET_NAME     = "上传易仓SKU映射关系"
+    downloads_dir = Path(paths["downloads"])
+    source_path   = Path(paths["core_1_6"])
+    template_path = Path(r"C:\Template\上传易仓SKU映射关系.xlsx")
+
+    xlsx_out_path = downloads_dir / "上传易仓SKU映射关系.xlsx"
+    xls_out_path  = downloads_dir / "上传易仓SKU映射关系.xls"
+
+    SHEET_NAME = "上传易仓SKU映射关系"
 
     # ========= Safety: ensure the source file was saved within the last 30 seconds =========
-    MAX_FILE_AGE  = time.time() - os.path.getmtime(SOURCE_PATH)
+    MAX_FILE_AGE = time.time() - source_path.stat().st_mtime
     if MAX_FILE_AGE > 30:
         raise RuntimeError(
-            f"⚠️ Source file '{SOURCE_PATH}' was last saved {int(MAX_FILE_AGE)} seconds ago, exceeding the 30-second limit. Please save again and retry."
+            f"⚠️ Source file '{source_path}' was last saved {int(MAX_FILE_AGE)} seconds ago, exceeding the 30-second limit. Please save again and retry."
         )
 
     # ========= Load workbooks =========
-    src_wb  = load_workbook(SOURCE_PATH, data_only=True)
+    src_wb  = load_workbook(source_path, data_only=True)
     src_ws  = src_wb[SHEET_NAME]
-    tmpl_wb = load_workbook(TEMPLATE_PATH)
+    tmpl_wb = load_workbook(template_path)
     tmpl_ws = tmpl_wb.active
 
     # ========= Define copy range =========
@@ -34,7 +38,7 @@ def SKU_out():
     START_ROW  = 2
     PASTE_ROW0 = 2
 
-    # Determine the last non‑empty row in the source sheet
+    # Determine the last non-empty row in the source sheet
     last_row = src_ws.max_row
     while last_row >= START_ROW and all(
         src_ws.cell(row=last_row, column=col).value is None
@@ -57,39 +61,33 @@ def SKU_out():
         for col in range(START_COL, END_COL + 1):
             src_val  = src_ws.cell(row=row_src, column=col).value
             tgt_cell = tmpl_ws.cell(row=row_dst, column=col)
-
-            # Keep empty cells as empty strings; strip whitespace otherwise
             tgt_cell.value = "" if src_val is None else str(src_val).strip()
-
-            # Apply background color to columns A–C
             if col <= 3:
                 tgt_cell.fill = orange_fill
 
-    # ========= Save the .xlsx file =========
-    # If an old version of the file exists, remove it first to avoid Excel opening an outdated copy
-    if os.path.exists(xlsx_out_path):
-        os.remove(xlsx_out_path)
-
+    # ========= Save .xlsx file =========
+    if xlsx_out_path.exists():
+        xlsx_out_path.unlink()
     tmpl_wb.save(xlsx_out_path)
     print("✅ Saved SKU.xlsx")
 
-    # ========= Use Excel COM to save as .xls =========
+    # ========= Save .xls using Excel COM =========
     excel = win32.gencache.EnsureDispatch("Excel.Application")
-    excel.Visible       = False
+    excel.Visible = False
     excel.DisplayAlerts = False
 
     try:
-        wb_excel = excel.Workbooks.Open(xlsx_out_path)
-        wb_excel.SaveAs(xls_out_path, FileFormat=56)  # 56 = .xls
+        wb_excel = excel.Workbooks.Open(str(xlsx_out_path))
+        wb_excel.SaveAs(str(xls_out_path), FileFormat=56)  # 56 = .xls
         wb_excel.Close()
     finally:
         excel.Quit()
 
     print("✅ Saved SKU.xls")
 
-    # ========= Delete the intermediate .xlsx file from Downloads =========
-    if os.path.exists(xlsx_out_path):
-        os.remove(xlsx_out_path)
+    # ========= Delete intermediate .xlsx =========
+    if xlsx_out_path.exists():
+        xlsx_out_path.unlink()
         print("🗑️ Deleted SKU.xlsx")
 
 '''

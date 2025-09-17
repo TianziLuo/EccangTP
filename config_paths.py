@@ -2,31 +2,36 @@ import sys
 from pathlib import Path
 import configparser
 
-if getattr(sys, "frozen", False):  # exe 打包环境
+# Determine the base path depending on the runtime environment
+if getattr(sys, "frozen", False):  # Running in packaged .exe environment
     _base_path = Path(sys.executable).parent
-else:  # 开发环境
+else:  # Running in development environment
     _base_path = Path(__file__).parent
 
-_config_path = _base_path / "dv_config.ini"
+# Path to the configuration file
+_config_path = _base_path / "CT_config.ini"
 
 config = configparser.ConfigParser()
-config.optionxform = str  # 保持 key 原样
+config.optionxform = str  # Preserve the original case of keys
 read_files = config.read(_config_path, encoding="utf-8")
 
 if not read_files:
-    raise FileNotFoundError(f"找不到配置文件: {_config_path}")
+    raise FileNotFoundError(f"Configuration file not found: {_config_path}")
 
 def get_eccang_paths():
+    """Load and return ECCANG-related paths from the config file."""
     paths = dict(config.items("Common"))
     paths.update(config.items("ECCANG"))
     return {k: Path(v) for k, v in paths.items()}
 
 def get_tp_paths():
+    """Load and return TP-related paths from the config file."""
     paths = dict(config.items("Common"))
     paths.update(config.items("TP"))
     return {k: Path(v) for k, v in paths.items()}
 
 def get_refresh_paths():
+    """Load and return REFRESH-related paths from the config file."""
     paths = dict(config.items("Common"))
     paths.update(config.items("REFRESH"))
     return {k: Path(v) for k, v in paths.items()}

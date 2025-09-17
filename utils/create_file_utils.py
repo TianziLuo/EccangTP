@@ -1,6 +1,5 @@
 from openpyxl import load_workbook
 import pandas as pd
-from pathlib import Path
 
 def generate_tp_csv(source_path, sheet_name, template_path, output_path):
     df = pd.read_excel(source_path, sheet_name=sheet_name, header=None, skiprows=1, usecols="A:F")
@@ -16,7 +15,7 @@ def generate_tp_csv(source_path, sheet_name, template_path, output_path):
         f.write(header + "\n")
         df.to_csv(f, index=False, header=False)
 
-    print(f"✅ TP CSV 已生成: {output_path}")
+    print(f"✅ TP CSV has been created: {output_path}")
 
 
 def update_inventory_excel(source_path, sheet_name, template_path, output_path,
@@ -36,7 +35,7 @@ def update_inventory_excel(source_path, sheet_name, template_path, output_path,
             template_ws.cell(row=idx, column=col - start_col + 1).value = source_ws.cell(row=row, column=col).value
 
     template_wb.save(output_path)
-    print(f"✅ 店小秘库存表已保存: {output_path}")
+    print(f"DXM inventory has been saved:: {output_path}")
 
 '''
 if __name__ == "__main__":
