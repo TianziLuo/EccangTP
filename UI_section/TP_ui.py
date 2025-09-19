@@ -10,7 +10,7 @@ def create_tp_section(parent):
         text="🍋 TP",
         font=header_font,
         fg="#072020",
-        bg="#fadee3",
+        bg="#fdfddb",
         padx=10,
         pady=10,
         bd=3,

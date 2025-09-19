@@ -6,32 +6,52 @@ from config_paths import get_eccang_paths
 
 paths = get_eccang_paths()
 
-def copy_download():
-    # Configs
+def copy_download(keywords=None):
+    """
+    Copy today's latest file for each keyword from downloads to target directory.
+    """
+    # Config directories
     download_dir = paths["downloads"]
-    target_dir = paths["copy_download"]
+    target_dir   = paths["copy_download"]
 
-    # List of keywords to search for in file names
-    keywords = ["shipment_order","product_csv","库存查询（库位）","产品库存","sku-relation","product-sku-relation"]
+    # Default keywords 
+    DEFAULT_KEYWORDS = [
+        "shipment_order", 
+        "product_csv", 
+        "库存查询（库位）", 
+        "产品库存", 
+        "sku-relation", 
+        "product-sku-relation"
+    ]
+    keywords = keywords or DEFAULT_KEYWORDS
 
-    today_files = []
-    today_date = datetime.today().date()  # Today's date (without time)
+    today_date = datetime.today().date()  
 
-    # Walk through the download directory
-    for root, _, files in os.walk(download_dir):
-        for file in files:
-        # Check if file ends with '.csv' or '.xls' and contains any of the keywords
-            if file.endswith((".csv", ".xls")) and any(k in file for k in keywords):
-                full_path = Path(root) / file
-                mtime = datetime.fromtimestamp(full_path.stat().st_mtime).date()
-                if mtime == today_date:
-                    today_files.append(full_path)
-                    
-    # If matching files are found, copy them to target directory
-    if today_files:
-        for file_path in today_files:
-            dest_path = target_dir / file_path.name
-            shutil.copy2(file_path, dest_path)
-            print(f"✅ Copied: {file_path.name} to {target_dir}")
-    else:
-        print(f"⚠️ No files found containing keywords {keywords} modified today")
+    for kw in keywords:
+        matched_files = []
+
+        # Search download_dir 
+        for root, _, files in os.walk(download_dir):
+            for file in files:
+                if file.endswith((".csv", ".xls")) and kw in file:
+                    full_path = Path(root) / file
+                    mtime = datetime.fromtimestamp(full_path.stat().st_mtime).date()
+                    if mtime == today_date:
+                        matched_files.append(full_path)
+
+        if not matched_files:
+            print(f"⚠️ No files found for keyword '{kw}' modified today")
+            continue
+
+        # Take the most recently modified file for this keyword
+        latest_file = max(matched_files, key=lambda f: f.stat().st_mtime)
+        dest_path = target_dir / latest_file.name
+
+        # Copy file to target directory
+        shutil.copy2(latest_file, dest_path)
+        print(f"✅ Copied (latest for '{kw}'): {latest_file.name} → {target_dir}")
+
+
+'''
+copy_download(["库存查询（库位）", "产品库存"])
+'''

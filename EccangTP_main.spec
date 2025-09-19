@@ -5,7 +5,7 @@ a = Analysis(
     ['EccangTP_main.py'],
     pathex=[],
     binaries=[],
-    datas=[('CT_config.ini', '.')],
+    datas=[('ET_config.ini', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

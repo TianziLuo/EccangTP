@@ -9,7 +9,7 @@ else:  # Running in development environment
     _base_path = Path(__file__).parent
 
 # Path to the configuration file
-_config_path = _base_path / "CT_config.ini"
+_config_path = _base_path / "ET_config.ini"
 
 config = configparser.ConfigParser()
 config.optionxform = str  # Preserve the original case of keys

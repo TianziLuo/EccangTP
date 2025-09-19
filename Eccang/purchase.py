@@ -8,7 +8,9 @@ from config_paths import get_eccang_paths
 paths = get_eccang_paths()
 
 def clean_folder():
-    """删除 purchase_path 目录下的旧 .xlsx / .csv 文件"""
+    """
+    Delete old .xlsx / .csv files in the purchase_path directory.
+    """
     folder_paths = paths["purchase_path"]
     if isinstance(folder_paths, (str, Path)):
         folder_paths = [Path(folder_paths)]
@@ -39,12 +41,15 @@ def clean_folder():
 
 
 def copy_purchase():
-    """从 downloads 复制今日的采购 CSV 文件到 purchase_path"""
+    """
+    Copy today's purchase CSV files from downloads to purchase_path.
+    """
     download_dir = Path(paths["downloads"])
     target_dirs = paths["purchase_path"]
     if isinstance(target_dirs, (str, Path)):
         target_dirs = [Path(target_dirs)]
 
+    # Ensure target directories exist
     for td in target_dirs:
         td.mkdir(parents=True, exist_ok=True)
 
@@ -52,6 +57,7 @@ def copy_purchase():
     today_files = []
     today_date = datetime.today().date()
 
+    # Walk through the downloads folder
     for root, _, files in os.walk(download_dir):
         for file in files:
             if file.lower().endswith(".csv") and any(k in file.lower() for k in keywords):
@@ -71,5 +77,3 @@ def copy_purchase():
                     print(f"❌ Failed to copy {file_path.name} → {td}, Reason: {e}")
     else:
         print(f"⚠️ No files found with keywords {keywords} modified today")
-
-
