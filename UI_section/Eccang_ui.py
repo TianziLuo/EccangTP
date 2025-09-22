@@ -14,7 +14,7 @@ def create_eccang_section(parent):
         text="🍉 Eccang",
         font=header_font,
         fg="#072020",
-        bg="#dbfdfd",
+        bg="#D1FAE5",
         padx=10,
         pady=10,
         bd=3,
@@ -25,23 +25,23 @@ def create_eccang_section(parent):
     eccang_container.columnconfigure(0, weight=1)
 
     # Step frames
-    frame1 = make_step_frame(eccang_container, "🍉 Step 1: Purchase Process", "#e5ffec")
+    frame1 = make_step_frame(eccang_container, "🍉 Step 1: Purchase Process", "#fdfddb")
     frame1.grid(row=0, column=0, sticky="nsew", pady=5)
     add_task_buttons(frame1, [("Update Purchase Folder", run_purchase_files)])
 
-    frame2 = make_step_frame(eccang_container, "🍉 Step 2-4: Unzip ➜ Convert ➜ Rename", "#e5ffec")
+    frame2 = make_step_frame(eccang_container, "🍉 Step 2-4: Unzip ➜ Convert ➜ Rename", "#fdfddb")
     frame2.grid(row=1, column=0, sticky="nsew", pady=5)
     add_task_buttons(frame2, [("Unzip, Convert, Rename", step2_to_4_all)])
 
-    frame3 = make_step_frame(eccang_container, "🍉 Step 5: Copy Downloads Files", "#e5ffec")
+    frame3 = make_step_frame(eccang_container, "🍉 Step 5: Copy Downloads Files", "#fdfddb")
     frame3.grid(row=2, column=0, sticky="nsew", pady=5)
     add_task_buttons(frame3, [("Copy Downloaded Files", step5_copy)])
 
-    frame4 = make_step_frame(eccang_container, "🍉 Inventory Only", "#e5ffec")
-    frame4.grid(row=3, column=0, sticky="nsew", pady=5)
+    frame4 = make_step_frame(eccang_container, "🌿 Inventory Only", "#dbfdfd")
+    frame4.grid(row=3, column=0, sticky="nsew", pady=11)
     add_task_buttons(frame4, [("Update", inv_only)])
 
-    for i in range(3):
+    for i in range(4):
         eccang_container.rowconfigure(i, weight=1)
 
     return eccang_container

@@ -10,7 +10,7 @@ btn_params = {
     "font": default_font,
     "relief": "raised",
     "bd": 2,
-    "width": 30,
+    "width": 28,
     "height": 1,                 
     "anchor": "center"
 }

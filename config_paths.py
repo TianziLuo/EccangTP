@@ -18,11 +18,13 @@ read_files = config.read(_config_path, encoding="utf-8")
 if not read_files:
     raise FileNotFoundError(f"Configuration file not found: {_config_path}")
 
+
 def get_eccang_paths():
     """Load and return ECCANG-related paths from the config file."""
     paths = dict(config.items("Common"))
     paths.update(config.items("ECCANG"))
     return {k: Path(v) for k, v in paths.items()}
+
 
 def get_tp_paths():
     """Load and return TP-related paths from the config file."""
@@ -30,8 +32,16 @@ def get_tp_paths():
     paths.update(config.items("TP"))
     return {k: Path(v) for k, v in paths.items()}
 
+
 def get_refresh_paths():
     """Load and return REFRESH-related paths from the config file."""
     paths = dict(config.items("Common"))
     paths.update(config.items("REFRESH"))
+    return {k: Path(v) for k, v in paths.items()}
+
+
+def get_diary_paths():
+    """Load and return DIARY-related paths from the config file."""
+    paths = dict(config.items("Common"))
+    paths.update(config.items("DIARY"))
     return {k: Path(v) for k, v in paths.items()}
