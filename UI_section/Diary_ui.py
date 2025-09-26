@@ -7,27 +7,27 @@ def create_diary_section(parent):
     # Main container for the Diary section
     diary_container = tk.LabelFrame(
         parent,
-        text="🍉 Diary",
+        text="🌵 Diary",
         font=header_font,
         fg="#072020",
-        bg="#D1FAE5",
+        bg="#fdfddb",
         padx=10,
         pady=10,
         bd=3,
         relief="groove",
         labelanchor="n"
     )
-    diary_container.grid(row=0, column=0, sticky="nsew", pady=0)
+    diary_container.grid(row=0, column=0, sticky="nsew", padx=0, pady=0)
     diary_container.columnconfigure(0, weight=1)
     diary_container.rowconfigure(0, weight=1)
 
     # Step frame inside container
-    frame1 = make_step_frame(diary_container, "🍉 Diary In", "#fdfddb")
-    frame1.grid(row=0, column=0, sticky="nsew", padx=10)
+    frame1 = make_step_frame(diary_container, "🌵 Diary In", "#dbfdfd")
+    frame1.grid(row=0, column=0, sticky="nsew", padx=17, pady=5)
     add_task_buttons(frame1, [("Open Diary", open_files)])
 
-    frame2 = make_step_frame(diary_container, "🍉 Diary Out", "#fdfddb")
-    frame2.grid(row=0, column=1, sticky="nsew", padx=10)
+    frame2 = make_step_frame(diary_container, "🌵 Diary Out", "#dbfdfd")
+    frame2.grid(row=0, column=1, sticky="nsew", padx=17, pady=5)
     add_task_buttons(frame2, [("Diary Output", run_output)])
 
 

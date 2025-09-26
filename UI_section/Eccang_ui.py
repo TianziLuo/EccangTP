@@ -38,7 +38,7 @@ def create_eccang_section(parent):
     add_task_buttons(frame3, [("Copy Downloaded Files", step5_copy)])
 
     frame4 = make_step_frame(eccang_container, "🌿 Inventory Only", "#dbfdfd")
-    frame4.grid(row=3, column=0, sticky="nsew", pady=11)
+    frame4.grid(row=3, column=0, sticky="nsew", pady=15)
     add_task_buttons(frame4, [("Update", inv_only)])
 
     for i in range(4):

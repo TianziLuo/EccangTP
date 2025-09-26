@@ -3,7 +3,6 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import messagebox
 import win32com.client as win32
-import time
 from config_paths import get_diary_paths
 
 

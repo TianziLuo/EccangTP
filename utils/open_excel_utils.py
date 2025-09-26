@@ -17,7 +17,3 @@ def open_excel_file(filepath):
         print(f"❌ Failed to open: {filepath}\nError: {e}")
         return None
 
-'''
-if __name__ == "__main__":
-    open_excel_file(r"C:\Frank\2.2_店小秘.xlsx")
-'''

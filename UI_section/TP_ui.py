@@ -22,14 +22,14 @@ def create_tp_section(parent):
 
     # SKU Mapping
     frame1 = make_step_frame(tp_container, "🍋 Refresh 1.1", "#dbfdfd")
-    frame1.grid(row=0, column=0, sticky="nsew", pady=5)
+    frame1.grid(row=0, column=0, sticky="nsew", pady=7)
     add_task_buttons(frame1, [
         ("Open 1.1", TP_tasks.step_1_1),
            ])
 
     # TP Upload
     frame2 = make_step_frame(tp_container, "🍋 TP Upload", "#dbfdfd")
-    frame2.grid(row=1, column=0, sticky="nsew", pady=5)
+    frame2.grid(row=1, column=0, sticky="nsew", pady=7)
     add_task_buttons(frame2, [
         ("Open 2.1", TP_tasks.step_2_1),
         ("Generate & Upload & Copy TP.csv", TP_tasks.step_2_2),
@@ -38,7 +38,7 @@ def create_tp_section(parent):
 
     # DXM
     frame3 = make_step_frame(tp_container, "🍋 DXM", "#dbfdfd")
-    frame3.grid(row=2, column=0, sticky="nsew", pady=5)
+    frame3.grid(row=2, column=0, sticky="nsew", pady=7)
     add_task_buttons(frame3, [
         ("Rename & Open", TP_tasks.step_3_1),
         ("Generate & Copy Inventory Update", TP_tasks.step_3_3)
