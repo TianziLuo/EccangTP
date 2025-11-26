@@ -3,7 +3,6 @@ from Eccang.purchase import clean_folder,copy_purchase
 
 import time
 from Eccang.unzip import unzip
-from Eccang.xls2csv import xls2csv
 from Eccang.rename import rename
 from Eccang.copy_download import copy_download
 
@@ -28,9 +27,6 @@ def step2_to_4_all():
     try:
         unzip()
         print("✔ Step 2 completed")
-        
-        xls2csv()
-        print("✔ Step 3 completed")
         
         rename()
         print("✔ Step 4 completed")

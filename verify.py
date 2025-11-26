@@ -25,7 +25,7 @@ def verify_license():
     try:
         expiry_date = datetime.strptime(expiry_str, "%Y-%m-%d").date()
         today = datetime.today().date()
-        if today > expiry_date:
+        if today > expiry_date  :
             return False, f"❌ License expired on {expiry_date}."
     except:
         return False, "❌ Invalid expiration date format."
