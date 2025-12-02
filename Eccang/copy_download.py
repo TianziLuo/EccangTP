@@ -17,11 +17,12 @@ def copy_download(keywords=None):
     # Default keywords 
     DEFAULT_KEYWORDS = [
         "shipment_order", 
-        "product_csv", 
+        "导出产品", 
         "库存查询（库位）", 
-        "产品库存", 
+        "product_inventory", 
         "sku-relation", 
-        "product-sku-relation"
+        "product-sku"
+        "purchase"
     ]
     keywords = keywords or DEFAULT_KEYWORDS
 

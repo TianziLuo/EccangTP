@@ -1,25 +1,9 @@
 from tkinter import messagebox
-from Eccang.purchase import clean_folder,copy_purchase
+
 
 import time
 from Eccang.unzip import unzip
-from Eccang.rename import rename
 from Eccang.copy_download import copy_download
-
-def run_purchase_files():
-    print("🍉 Running: Update purchase folder")
-    try:
-        clean_folder()
-        print("✔ Clean Folder completed")
-        time.sleep(2)
-
-        copy_purchase()
-        print("✔ Copy Files completed")
-        time.sleep(2)
-
-        messagebox.showinfo("Done", "Folder Updated ✅")
-    except Exception as e:
-        messagebox.showerror("Error", f"❌ Folder Updated failed:\n{e}")
 
 
 def step2_to_4_all():
@@ -27,9 +11,6 @@ def step2_to_4_all():
     try:
         unzip()
         print("✔ Step 2 completed")
-        
-        rename()
-        print("✔ Step 4 completed")
         
         messagebox.showinfo("Done", "All Steps (2 ➜ 4) completed ✅")
     except Exception as e:

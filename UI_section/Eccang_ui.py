@@ -1,6 +1,5 @@
 import tkinter as tk
 from UI_section.Eccang_tasks import (
-    run_purchase_files,
     step2_to_4_all,
     step5_copy,
 )
@@ -25,9 +24,6 @@ def create_eccang_section(parent):
     eccang_container.columnconfigure(0, weight=1)
 
     # Step frames
-    frame1 = make_step_frame(eccang_container, "🍉 Step 1: Purchase Process", "#fdfddb")
-    frame1.grid(row=0, column=0, sticky="nsew", pady=5)
-    add_task_buttons(frame1, [("Update Purchase Folder", run_purchase_files)])
 
     frame2 = make_step_frame(eccang_container, "🍉 Step 2-4: Unzip ➜ Convert ➜ Rename", "#fdfddb")
     frame2.grid(row=1, column=0, sticky="nsew", pady=5)
